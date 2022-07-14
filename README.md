@@ -1,5 +1,4 @@
 # Ossana
-aplicacion web para gestion de tareas
-
-servidor de produccion:
+Aplicacion web para gestion de tareas.
+Servidor de produccion:
 [Ossana | Home ]()
