@@ -17,11 +17,15 @@ export const Navbar = () => {
         onClick={ openSideMenu }
         >
           <MenuOutlinedIcon/>
+          
 
         </IconButton>
-        <Typography variant='h6'> Ossana</Typography>
+        <NextLink href="/" passHref>
+          <Link underline='none' color="white">
+            <Typography variant='h6'>OpenJira</Typography>
+          </Link>
+        </NextLink>
       </Toolbar>
-
     </AppBar>
   )
-}
+};
