@@ -6,7 +6,7 @@ import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 
 import { UIContext } from '../../context/ui';
 
-const menuItems: string[] = ['Inbox', 'Starred', 'Send Email', 'Drafts']
+const menuItems: string[] = ['Inbox','Starred','Send Email','Drafts']
 
 
 export const Sidebar = () => {
@@ -35,13 +35,23 @@ export const Sidebar = () => {
             </ListItem>
           ))
         }
-
       </List>
+
       <Divider/>
-
+        <List>
+          { 
+          menuItems.map( (text, index) => (
+            <ListItem button key={ text }>
+              <ListItemIcon>
+                { index % 2 ? <InboxOutlinedIcon />:
+                <MailOutlinedIcon/> }
+              </ListItemIcon>
+              <ListItemText primary={ text } />
+            </ListItem>
+          ))
+          }
+        </List>
     </Box>
-     
-
     </Drawer >
   )
 };
